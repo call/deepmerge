@@ -22,3 +22,8 @@ class ListStrategies(StrategyList):
     def strategy_append(config, path, base, nxt):
         """ append nxt to base. """
         return base + nxt
+
+    @staticmethod
+    def strategy_unique(config, path, base, nxt):
+        """ unique values from nxt + base. """
+        return list(set(base + nxt))
